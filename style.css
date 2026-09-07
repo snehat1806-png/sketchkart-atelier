@@ -11,68 +11,116 @@ header{
     width: 100%;
     color:rgb(187, 163, 163);
 }
-.top-header{
-    display:flex;
-    width:100%;
-    align-items:center;
-    gap: 25px;
-    padding: 20px 30px;
+/* ================= HEADER ================= */
+
+header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
 }
+
+.top-header {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 30px;
+
+    display: grid;
+    grid-template-columns: 180px 100px 1fr 130px 80px;
+    align-items: center;
+    gap: 20px;
+
+    box-sizing: border-box;
+}
+
+/* Logo */
 .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
     display: block;
-    flex-shrink:0;     
 }
-.logo img{
-    width:200px;
-    height:60px;
-    display:block;
-    object-fit: contain;
-}
+
+/* Delivery */
 .delivery-location {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    white-space: nowrap;
+    font-size: 12px;
+    line-height: 1.2;
 }
+
 .delivery-location span {
+    color: #777;
+}
+
+.delivery-location strong {
+    color: #222;
     font-size: 14px;
 }
-.delivery-location strong {
-    font-size: 16px;
-}
+
+/* Search */
 .search-box {
     display: flex;
-    flex: 1;
-}
-.search-box input {
     width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #aaa;
+    margin: 0;
 }
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    height: 42px;
+    padding: 0 14px;
+
+    border: 1px solid #ccc;
+    border-right: none;
+
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
 .search-box button {
-    padding: 12px 18px;
+    width: 80px;
+    height: 42px;
+
     border: none;
-    background-color: #ff6a00;
+    background: #ff6a00;
     color: white;
+
+    font-weight: bold;
     cursor: pointer;
 }
-.user-account,
-.cart {
-    text-decoration: none;
-    color: #222;
-    white-space: nowrap;
-}
+
+/* User */
 .user-account {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+
+    text-decoration: none;
+    color: #222;
+
+    white-space: nowrap;
 }
+
+.user-account span {
+    font-size: 14px;
+}
+
 .user-account small {
-    font-size: 12px;
+    font-size: 10px;
+    color: #555;
 }
+
+/* Cart */
 .cart {
-    font-weight: bold;
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    white-space: nowrap;
 }
 .hero {
     width: 100%;
@@ -125,6 +173,32 @@ header{
 
     font-size: 16px;
     font-weight: bold;
+}
+.collections h2 {
+    margin-top:10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.collections h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #ff6a00;
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+.collections .section-subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 30px;
+    font-style: italic;
 }
 .collection-container {
     display: flex;
@@ -481,25 +555,284 @@ footer,
     width: 100%;
     max-width: 100%;
 }
+/* ================= MOBILE HEADER ================= */
+
+@media (max-width: 600px) {
+
+    .top-header {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        padding: 12px;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .logo img {
+        width: 110px;
+        height: auto;
+        display: block;
+    }
+
+    .delivery-location {
+        display: none;
+    }
+
+    .search-box {
+        order: 3;
+        width: 100%;
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    .search-box input {
+        min-width: 0;
+        flex: 1;
+        width: auto;
+        box-sizing: border-box;
+    }
+
+    .search-box button {
+        flex-shrink: 0;
+    }
+
+    .user-account {
+        margin-left: auto;
+        text-align: right;
+        font-size: 12px;
+    }
+
+    .user-account small {
+        display: block;
+        font-size: 9px;
+    }
+
+    .cart {
+        white-space: nowrap;
+        font-size: 13px;
+    }
+}
+/* ================= MOBILE HERO ================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 420px;
+        padding: 25px 15px;
+        box-sizing: border-box;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 25px 15px;
+        box-sizing: border-box;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .hero a,
+    .hero button {
+        font-size: 14px;
+        padding: 11px 18px;
+    }
+}
 @media (max-width: 600px) {
 
     .collection-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
         width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 0 12px;
+        box-sizing: border-box;
     }
 
     .collection-card {
         width: 100%;
         min-width: 0;
+        box-sizing: border-box;
+        overflow: hidden;
     }
 
     .collection-card img {
         width: 100%;
-        height: 180px;
+        height: 160px;
         object-fit: cover;
         display: block;
+    }
+
+    .collection-card h3 {
+        font-size: 16px;
+        margin: 8px 0 4px;
+    }
+
+    .collection-card span {
+        font-size: 13px;
+    }
+}
+@media (max-width: 600px) {
+
+    .product-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    .product-card {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .product-card h3 {
+        font-size: 16px;
+        margin: 8px 0 4px;
+    }
+
+    .product-card .artist-name {
+        font-size: 12px;
+    }
+
+    .product-card .price {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .product-card a {
+        font-size: 13px;
+    }
+}
+/* ================= MOBILE WHY SKETCHKART ================= */
+
+@media (max-width: 600px) {
+
+    .why-sketchkart {
+        width: 100%;
+        padding: 40px 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .why-sketchkart h2 {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+
+    .why-sketchkart h3 {
+        font-size: 18px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+
+    .why-sketchkart p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .why-sketchkart a {
+        display: inline-block;
+        font-size: 14px;
+        padding: 11px 18px;
+    }
+}
+/* ================= MOBILE HELP ================= */
+
+@media (max-width: 600px) {
+
+    .help {
+        width: 100%;
+        padding: 40px 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .help h2 {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+
+    .help p {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 0 auto 20px;
+    }
+
+    .help a {
+        display: inline-block;
+        font-size: 14px;
+        padding: 11px 18px;
+    }
+
+}
+/* ================= MOBILE FOOTER ================= */
+
+@media (max-width: 600px) {
+
+    footer {
+        width: 100%;
+        padding: 40px 20px 0;
+        box-sizing: border-box;
+    }
+
+    .footer-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 20px;
+        box-sizing: border-box;
+    }
+
+    .footer-column {
+        min-width: 0;
+    }
+
+    .footer-column h3 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .footer-column p,
+    .footer-column a {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .copyright {
+        margin-top: 30px;
+        padding: 18px 0;
+    }
+
+    .copyright p {
+        font-size: 12px;
     }
 
 }
