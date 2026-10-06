@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 30px;
+}
+
+.cart-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cart-page h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#cart-container > div {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#cart-container h3 {
+    margin: 0 0 10px;
+}
+
+#cart-container p {
+    margin: 0;
+    font-weight: bold;
+}
