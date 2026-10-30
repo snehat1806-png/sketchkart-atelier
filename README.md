@@ -1,40 +1,23 @@
-# Sketchkart Atelier 🎨
+# SketchKart Atelier
 
-A multi-page e-commerce style website for an art and sketch store — built from scratch as a hands-on project to learn real-world web development.
+Handmade art marketplace. Artists sell sketches, paintings, portraits and custom gifts. Customers browse, add to cart, order, pay (demo mode) and review.
 
-## About
+**Stack:** HTML, CSS, JavaScript (frontend in `public/`), Node.js + Express, MongoDB, JWT login.
 
-Sketchkart Atelier is a concept online store for sketches, paintings, portraits, and gift items. It's my first project built entirely from scratch, focused on learning how a real multi-page website comes together — layout, navigation, product pages, and user flow.
+## Run locally
+```bash
+npm install
+cp .env.example .env     # set MONGO_URI (MongoDB Atlas works) and JWT_SECRET
+npm start
+```
+Open http://localhost:3000. On the first start the app adds a demo artist (demo.artist@sketchkart.test / demo1234) with 4 sample artworks.
 
 ## Pages
+`index`, `Sketches`, `Paintings`, `Portraits`, `CustomGifts`, `artists`, `login`, `cart`, `orders`, `sell`, `custom`
 
-- **Home** (`index.html`) — landing page with banner and featured items
-- **Paintings** (`Paintings.html`) — paintings category
-- **Portraits** (`Portairts.html`) — portrait category
-- **Sketches** (`Sketches.html`) — sketches category
-- **Gifts** (`Gifts.html`) — gift items category
-- **New Releases** (`NewReleases.html`) — newly added items
-- **Today's Deal** (`Today'sDeal.html`) — daily offers/deals
-- **Cart** (`cart.html`) — shopping cart page
-- **Login** (`login.html`) — user login page
+## Order flow
+Ready art: cart → place order → pay → artist delivers → review.
+Custom art: request → artist sends price → customer accepts → pays → artist makes it → delivered → review.
 
-## Tech Used
-
-- HTML5
-- CSS3
-- *(JavaScript — coming soon: cart functionality, login validation)*
-
-## Status
-
-🚧 **In Progress** — currently building out the static structure and design. Next up: adding JavaScript for interactive cart (add/remove items) and login form validation.
-
-## What I'm Learning
-
-- Structuring a multi-page website
-- Consistent navigation and layout across pages
-- Working with product cards, banners, and images
-- (Upcoming) DOM manipulation and form handling with JavaScript
-
-## Author
-
-Sneha Tiwari
+## Next steps
+Razorpay payments, Cloudinary image storage, remaining footer pages (about, faq, privacy, terms), deploy on Render.
