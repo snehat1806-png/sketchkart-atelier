@@ -1,7 +1,6 @@
-# 🎨 SketchKart Atelier
+🎨 SketchKart Atelier
 
-### A Multi-Artist Marketplace for Handmade Art & Custom Creations
-
+Where Art Meets Its Admirers.
 SketchKart Atelier is an online art marketplace designed to connect independent artists with customers who appreciate creativity, handmade artwork, and personalized artistic creations.
 
 The platform aims to provide artists with an opportunity to showcase their artwork, build their portfolios, and sell their creations, while allowing customers to discover artists, explore different art categories, purchase ready-made artwork, and request customized pieces.
