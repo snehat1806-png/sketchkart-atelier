@@ -2,11 +2,13 @@
 
 ### Where Art Meets Its Admirers.
 
-SketchKart Atelier is an online art marketplace designed to connect independent artists with customers who appreciate creativity, handmade artwork, and personalized artistic creations.
+SketchKart Atelier is a multi-vendor online art marketplace that connects independent artists with people who love art.
 
-The platform aims to provide artists with an opportunity to showcase their artwork, build their portfolios, and sell their creations, while allowing customers to discover artists, explore different art categories, purchase ready-made artwork, and request customized pieces.
+Artists can register, build their profiles, showcase portfolios, sell existing artworks, and accept custom commissions, all while chatting directly with customers.
 
-The vision is to develop a complete multi-vendor art marketplace where artists and customers can interact throughout the artwork discovery, ordering, customization, and delivery process.
+Customers can explore collections, discover new artists, buy ready-made pieces, request personalized artwork, pay online, and track their orders.
+
+My vision is to make discovering, customizing, buying and selling art easier and more accessible for everyone involved.
 
 ---
 
